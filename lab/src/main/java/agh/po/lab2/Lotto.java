@@ -35,8 +35,8 @@ public class Lotto {
 
         long czas1 = System.currentTimeMillis();
         int licznikRazy = 0;
-        ArrayList<Integer> lista3 = new ArrayList<>();
         while(true) {
+            ArrayList<Integer> lista3 = new ArrayList<>();
             for(int m=0;m<6;m++) {
                 int liczba2 = (int)(Math.random()*(49-1+1)+1);
                 if(lista3.contains(liczba2)) {
@@ -45,14 +45,20 @@ public class Lotto {
                     lista3.add(liczba2);
                 }
             }
+            //System.out.print("Wylosowane liczby: ");
+            //System.out.println(lista3);
+
             lista3.retainAll(lista2);
             if(lista3.size() == 6) {
                 break;
             }
             licznikRazy++;
         }
+        System.out.print("Twoje typy: ");
+        System.out.println(lista2);
         long czas2 = System.currentTimeMillis();
         long czaswyk = czas2 - czas1;
-        System.out.println(licznikRazy);
+        System.out.println("Liczba losowań: " + licznikRazy);
+        System.out.println("Czas losowania: " + czaswyk/1000 +" s");
         }
     }
