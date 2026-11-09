@@ -1,4 +1,6 @@
 package agh.po.lab3;
+import java.util.HashMap;
+import java.util.Map;
 
 public class CodingBat {
     public boolean startHi(String str) {
@@ -39,9 +41,29 @@ public class CodingBat {
 
     public static void main(String[] args) {
         CodingBat obiekt = new CodingBat();
-        System.out.print(obiekt.startHi("hi bob"));
+        //System.out.print(obiekt.startHi("hi bob"));
+        //System.out.print(obiekt.mapAB(new HashMap<>(Map.of("a","aa","b","bb"))));
+    }
+
+    public Map<String, String> mapAB(Map<String, String> map) {
+        if (map.containsKey("a") && map.containsKey("b")) {
+            map.put("ab", map.get("a") + map.get("b"));
+        }
+        return map;
+    }
+
+    public Map<String, Integer> wordLen(String[] strings) {
+        Map<String, Integer> map = new HashMap<>();
+
+        for (String str : strings) {
+            map.put(str, str.length());
+        }
+
+        return map;
     }
 }
+
+
 
 
 
