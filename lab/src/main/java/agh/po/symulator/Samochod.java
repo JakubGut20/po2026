@@ -12,5 +12,6 @@ public class Samochod {
         silnik.zatrzymaj();
         skrzynia.ustawBieg(0);
     }
+
 }
 

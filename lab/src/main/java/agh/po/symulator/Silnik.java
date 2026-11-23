@@ -11,4 +11,8 @@ public class Silnik extends Komponent {
         obroty = 0;
 
     }
+
+    public Silnik(String name, int waga, float cena) {
+        super(name, waga, cena);
+    }
 }
