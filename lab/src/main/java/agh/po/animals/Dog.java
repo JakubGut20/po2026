@@ -8,4 +8,8 @@ public class Dog extends Animal {
     public String getDescription() {
         return "Pies o imieniu: " + name;
     }
+
+    public void makeSound() {
+        System.out.println(name + " szczeka");
+    }
 }

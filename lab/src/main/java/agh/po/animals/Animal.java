@@ -9,9 +9,10 @@ public abstract class Animal {
         this.name = name;
     }
 
-    public getLegs() {
+    public int getLegs() {
         return legs;
     }
 
     public abstract String getDescription();
+    public abstract void makeSound();
 }
