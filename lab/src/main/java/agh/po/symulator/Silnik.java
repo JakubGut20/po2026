@@ -12,7 +12,29 @@ public class Silnik extends Komponent {
 
     }
 
-    public Silnik(String name, int waga, float cena) {
+    public void zwiekszObroty() {
+        if(obroty > 0) {
+            obroty = Math.min(obroty + 500, maxObroty);
+        }
+    }
+
+    public void zmniejszObroty() {
+        if(obroty > 0) {
+            obroty = Math.max(obroty - 500, 800);
+        }
+    }
+
+    public int getObroty() {
+        return obroty;
+    }
+
+    public int getMaxObroty() {
+        return maxObroty;
+    }
+
+    public Silnik(String name, int waga, double cena, int maxObroty) {
         super(name, waga, cena);
+        this.maxObroty = maxObroty;
+        this.obroty = 0;
     }
 }

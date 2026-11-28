@@ -6,11 +6,24 @@ public class Pozycja {
 
 
     public void aktualizujPozycje(double deltaX, double deltaY) {
-        this.x = deltaX;
-        this.y = deltaY;
+        this.x += deltaX;
+        this.y += deltaY;
     }
 
     public String getPozycja() {
         return "Aktualna pozycja to x = " + x + " , y= " + y;
+    }
+
+    public double getX() {
+        return x;
+    }
+
+    public double getY() {
+        return y;
+    }
+
+    public Pozycja(double x, double y) {
+        this.x = x;
+        this.y = y;
     }
 }
